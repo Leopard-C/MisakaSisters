@@ -1,6 +1,6 @@
 ## How many Misaka Sister's in Bilibili.
 
->= 1848
+\>= 1848
 
 ![misaka](assets/001.png)
 
