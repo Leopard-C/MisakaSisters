@@ -214,7 +214,8 @@ if __name__ == '__main__':
             '%E5%BE%A1%E5%9D%82%20ooooo',               # 御坂 ooooo
             '%E5%BE%A1%E6%9D%BF',                       # 御板 (错别字)
             'yuban',                                    # (拼音)
-            'みさか'                                    # (日语)
+            'みさか',                                    # (日语)
+            'misaka'
         ]
         for i in range(0, len(keywords)):
             results = searchYuBan(keywords[i])
