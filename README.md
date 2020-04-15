@@ -1,3 +1,13 @@
+Author: [Leopard-C](https://github.com/Leopard-C)
+
+Github: [Leopard-C/MisakaSisters](https://github.com/Leopard-C/MisakaSisters)
+
+Email: <leopard.c@outlook.com>
+
+Last update: 2020-04-15
+
+---
+
 ## How many Misaka Sisters in bilibili ?
 
 ~~使用Python开发~~  
@@ -130,6 +140,40 @@ UNION
 SELECT nickname AS unique_name FROM MisakaSisters.nicknames WHERE exist = 1;
 ```
 
+### 4.4 编号不合法 [ 52 个 ]
+
++ misaka_id > 20001
+
+![image-20200415092204808](assets/README/image-20200415092204808.png)
+
+```SQL
+SELECT * FROM MisakaSisters.misaka_sisters_info WHERE misaka_id > 20001;
+```
+
+### 4.5 最火的MisakaSister  [ 10032 号 ]
+
+导出数据为`csv`，使用`Excel`进一步分析
+
+```SQL
+SELECT name AS unique_name, misaka_id FROM MisakaSisters.misaka_sisters_info WHERE misaka_id <> -1
+UNION
+SELECT nickname AS unique_name, misaka_id FROM MisakaSisters.nicknames WHERE exist = 1
+INTO OUTFILE '/var/lib/mysql-files/unique_name_misaka_id.csv' 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '';
+```
+
+出现次数大于`5`次的`misaka_id`如下图所示。
+
+其中前五名分别为
+
++ 10032
++ 20001（最后之作）
++ 10086 （很有中国特色！）
++ 19090
++ 9982
+
+![image-20200415095037745](assets/README/image-20200415095037745.png)
+
 ## 5. 数据(表)说明
 
 + `misaka_sisters_info`：基于关键词搜索得到的结果，信息较为详细，包括用户id(mid)，misaka_id，签名(sign)，头像URL(face)，粉丝数(fan)，视频数(video)，等级(level)等。
@@ -151,13 +195,9 @@ SELECT nickname AS unique_name FROM MisakaSisters.nicknames WHERE exist = 1;
 ![image-20200415012556628](assets/README/image-20200415012556628.png)
 
 + “御坂32001倒写”，可想而知`10032`有多抢手
-
 + “御坂野穹12138”，剔除。（在网上也没搜到“御坂野穹”是谁，暂且剔除吧）。
-
 + “御坂10032的黑猫”。剔除。
-
-+ “爱御坂美琴的黑子1997”。你给黑子遍啥号啊。
-
++ “爱御坂美琴的黑子1997”。你给黑子编啥号啊（也有可能是指1997年吧，出生年份，maybe）。
 + “L5の御坂”。呃呃，我查询了`Level`、`LV`，你竟然用`L5`，还好后来搜索`5`的时候找到了你，把你剔除。
 
 ## END
