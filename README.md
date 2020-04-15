@@ -1,11 +1,6 @@
-Author: [Leopard-C](https://github.com/Leopard-C)
-
-Github: [Leopard-C/MisakaSisters](https://github.com/Leopard-C/MisakaSisters)
-
-Email: <leopard.c@outlook.com>
-
-Last update: 2020-04-15
-
+---
+Email:  leopard.c@outlook.com
+LastUpdate: 2020-04-15
 ---
 
 ## How many Misaka Sisters in bilibili ?
@@ -124,9 +119,9 @@ UNION
 SELECT nickname AS unique_name FROM MisakaSisters.nicknames WHERE exist = 1;
 ```
 
-### 4.3  较为全面(宽松)的统计  [ 9431 个 ]
+### 4.3  较为全面(宽松)的统计  [ 9426 个 ]
 
-也就是b站有 `9431+ `个御坂妹妹。
+也就是b站有 `9426+ `个御坂妹妹。
 
 昵称中含有`Misaka`、`御坂`、`御坂妹妹`、`号`、数字以及其他字符的用户。
 
@@ -140,7 +135,7 @@ UNION
 SELECT nickname AS unique_name FROM MisakaSisters.nicknames WHERE exist = 1;
 ```
 
-### 4.4 编号不合法 [ 52 个 ]
+### 4.4 编号不合法 [ 53 个 ]
 
 + misaka_id > 20001
 
@@ -172,7 +167,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '';
 + 19090
 + 9982
 
-![image-20200415095037745](assets/README/image-20200415095037745.png)
+![image-20200415143218770](assets/README/image-20200415143218770.png)
 
 ## 5. 数据(表)说明
 
@@ -185,7 +180,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '';
 
 数据每周日更新一次。最新的数据中，相比之前新增的数据需要人工确认。（我应该会选择性的确认部分数据）。
 
-## 6. 趣事
+## 6. Hahahaha
 
 + `lever5`：单词拼错，还好无意间看到了（之前筛选过`level`，没想到后来又看到一个`lever`）
 
@@ -198,6 +193,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '';
 + “御坂野穹12138”，剔除。（在网上也没搜到“御坂野穹”是谁，暂且剔除吧）。
 + “御坂10032的黑猫”。剔除。
 + “爱御坂美琴的黑子1997”。你给黑子编啥号啊（也有可能是指1997年吧，出生年份，maybe）。
++ “御板黑子001”。又一个。
 + “L5の御坂”。呃呃，我查询了`Level`、`LV`，你竟然用`L5`，还好后来搜索`5`的时候找到了你，把你剔除。
 
 ## END
