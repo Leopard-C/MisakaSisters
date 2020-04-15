@@ -1,6 +1,6 @@
 ---
 Email:  leopard.c@outlook.com
-LastUpdate: 2020-04-15
+Update: 2020-04-15
 ---
 
 ## How many Misaka Sisters in bilibili ?
