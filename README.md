@@ -1,12 +1,8 @@
 > 更详细的统计，在这里：[Leopard-C/BiliUserSpider](https://github.com/Leopard-C/BiliUserSpider)
 
-
----
-Email:  leopard.c@outlook.com
-Update: 2020-04-15
----
-
 ## How many Misaka Sisters in bilibili ?
+
+2020-04-15
 
 ~~使用Python开发~~  
 
